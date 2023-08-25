@@ -10,13 +10,13 @@ const Navbar = () => {
     <div>
       <nav className="navbar sticky-top navbar-expand-lg flex-row">
         <div className="container-fluid justify-content-between">
-         <Logo/>
-           <ItemListContainer
+          <Logo />
+          <ItemListContainer
             menu1="Home"
-            menu2="Dulce"
-            menu3="Salado"
-            tipo="alimento"
-          />
+            menu2="Salado"
+            menu3="Dulce"
+            menu4="Bebidas"
+            />
           <div className="d-flex align-items-center flex-column">
             <Valor />
             <CartWidget />
@@ -27,3 +27,4 @@ const Navbar = () => {
   );
 };
 export default Navbar;
+

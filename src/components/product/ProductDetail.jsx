@@ -15,7 +15,8 @@ const productos = [
       '@Yo El momento ideal para desconectarse es cuando llegan los amigos a casa, y una picada es el condimento indispensable para una juntada increíble. Pero hay que prepararlo con tiempo para que en la mesa no falte este rico.',
     tema: '#picada #fiambre #quesos',
     megusta: 125,
-    precio: 1325
+    precio: 1325,
+    clase:'salado'
   },
 
   {
@@ -28,7 +29,8 @@ const productos = [
       '@Yo Uno de los grandes placeres en la cocina que estoy descubriendo desde hace un tiempo es el de preparar tus masas caseras, para todo tipo de preparaciones. Tal es mi afición que en la sección de masas',
     tema: '#pancasero #masamadre',
     megusta: 198,
-    precio: 3425
+    precio: 3425,
+    clase:'salado'
   },
 
   {
@@ -41,7 +43,8 @@ const productos = [
       '@Yo ¿Es época de mandarinas y tienes una licuadora cerca? A cocinar se ha dicho, si tienes estas dos cosas a mano y dos o tres ingredientes mas podes hacer una super torta de mandarina en licuadora. Hoy te ',
     tema: '#mandarina #torta ',
     megusta: 230,
-    precio: 4365
+    precio: 4365,
+    clase:'dulce'
   },
 
   {
@@ -54,7 +57,8 @@ const productos = [
       '@Yo No van a poder creer lo que son estos mini pan dulce! Receta de pan dulce en formato mini y de esfuerzo mini! Porque éste pan dulce se hace en media hora. Hoy vamos a aprender a cocinar un pan dulce rico, con muchas frutas',
     tema: '#pandulce #navidad',
     megusta: 361,
-    precio: 6784
+    precio: 6784,
+    clase:'dulce'
   },
 
   {
@@ -67,7 +71,8 @@ const productos = [
       '@Yo Me puse a leer un poquito acerca de su historia, donde surgió exactamente y encontré un montón de versiones… Resulta que sí, los italianos reclamaron su autoría en la receta dado que este tipo de pan saborizado tan particular ',
     tema: '#focaccia #italia',
     megusta: 500,
-    precio: 2744
+    precio: 2744,
+    clase:'salado'
   },
 
   {
@@ -80,7 +85,8 @@ const productos = [
       '@Yo El plato estrella a la hora de hablar de recetas económicas y ricas. Encima es facilísima, no pueden pedir nada más. Lo ideal, y para que este pan de carne sea mucho más rico,sería que tengas El plato estrella a la hora de hablar de',
     tema: '#carne #carnehorno ',
     megusta: 421,
-    precio: 2734
+    precio: 2734,
+    clase:'salado'
   },
 
   {
@@ -93,7 +99,8 @@ const productos = [
       '@Yo Baklava es un pastel elaborado con una pasta de  pistachos o nueces trituradas, distribuida en una masa filo y bañado en almíbar o jarabe de miel. Existen diversas variedades que incorporan avellanas y almendras',
     tema: '#baklava #postreturco',
     megusta: 548,
-    precio: 1734
+    precio: 1734,
+    clase:'dulce'
   },
 
   {
@@ -106,8 +113,35 @@ const productos = [
       '@Yo Un simple bizcochuelo ya no es suficiente una vez que conozcas esta esponjosa torta de Kinder Bueno. Batir los huevos con el azúcar, añadir la harina, la levadura en polvo y la vainilla, a',
     tema: '#torta #kinder ',
     megusta: 256,
-    precio: 8765
+    precio: 8765,
+    clase:'dulce'
   },
+  {
+    id: 9,
+    tipo: 'imagen',
+    titulo: 'Fernet con Gaseosa Cola',
+    ubicacion: '../img/content/bebFernetCoca.jpg ',
+    alt: 'Imágen que presenta trago de Fernet con Coca cola. ',
+    descripcion:
+      '@Yo El fernet con coca, también conocido como fernando o su diminutivo fernandito, ​​ es un cóctel que consiste en bebida de cola y fernet sobre hielo, típico de Argentina, donde es considerado un ícono cultural.​ También se expandió y se lo puede encontrar en algunos países limítrofes, como Paraguay o Uruguay.​​',
+    tema: '#fernet #cocacola #fernandito',
+    megusta: 456,
+    precio: 4765,
+    clase:'bebidas'
+  },
+  {
+    id: 10,
+    tipo: 'imagen',
+    titulo: 'Cuba Libre',
+    ubicacion: '../img/content/bebCubalibre.jpg ',
+    alt: 'Imágen que presenta una torta de Chocolate. ',
+    descripcion:
+      '@YoEl cubalibre es un cóctel cubano resultante de la mezcla del refresco de cola con ron y jugo de limón. Generalmente producido a base de ron añejo, bebida de cola, limón, sal, agua mineral y azúcar. ',
+    tema: '#Bebida #CubaLibre ',
+    megusta: 300,
+    precio: 3765,
+    clase:'bebidas'
+  }
 ];
 
 const ProductDetail = () => {
@@ -126,10 +160,10 @@ const ProductDetail = () => {
             </a>
             <div className="card-body">
               <p className="card-text align-middle">
-              
+                {' '}
                 {item.descripcion}
-                <a  href="404.html" className="textAmpliar">
-                  Ver más...
+                <a href="404.html" className="textAmpliar">
+                  Ver más...{' '}
                 </a>
               </p>
               <p className="textLike">{item.tema}</p>
