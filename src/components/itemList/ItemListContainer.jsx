@@ -4,6 +4,7 @@ import ItemList from './ItemList'
 import { getAlimentos } from "../../services/services";
 import { useParams } from "react-router-dom";
 
+
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
   const { clase } = useParams();

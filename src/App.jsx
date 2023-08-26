@@ -1,10 +1,11 @@
 import React from "react";
-import "./style.css";
 import Navbar from './components/navbar/NavBar.jsx';
 import Greeting from './components/main/Greeting.jsx';
 import { Routes, Route } from "react-router-dom";
-import ItemListContainer from "./components/itemList/ItemListContainer";
+import ItemListContainer from "./components/itemList/itemListContainer";
 import ItemDetailContainer from "./components/itemDetail/itemDetailContainer";
+import Error from "./components/error/Error";
+
 
 
 export default function App() {
@@ -19,10 +20,13 @@ export default function App() {
               <Route path="/" element={<ItemListContainer />} />
               <Route path="/category/:clase" element={<ItemListContainer />} />
               <Route path="/item/:id" element={<ItemDetailContainer />} />
-            </Routes>
+              <Route path="/404.html" element={<Error />} />
+              <Route path="/category/:clase/404.html" element={<Error />} />
+              <Route path="/category/404.html" element={<Error />} />
+              <Route path="/item/:id//404.html" element={<Error />} />
+              </Routes>
           </div>
         </div>
-
       </main>
     </>
   );
