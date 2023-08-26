@@ -16,7 +16,7 @@ const productos = [
     tema: '#picada #fiambre #quesos',
     megusta: 125,
     precio: 1325,
-    clase:'salado'
+    clase: 'salado'
   },
 
   {
@@ -30,7 +30,7 @@ const productos = [
     tema: '#pancasero #masamadre',
     megusta: 198,
     precio: 3425,
-    clase:'salado'
+    clase: 'salado'
   },
 
   {
@@ -44,7 +44,7 @@ const productos = [
     tema: '#mandarina #torta ',
     megusta: 230,
     precio: 4365,
-    clase:'dulce'
+    clase: 'dulce'
   },
 
   {
@@ -54,11 +54,11 @@ const productos = [
     ubicacion: '../img/content/pandulce.png',
     alt: 'Imágen que presenta unos panes dulces.',
     descripcion:
-      '@Yo No van a poder creer lo que son estos mini pan dulce! Receta de pan dulce en formato mini y de esfuerzo mini! Porque éste pan dulce se hace en media hora. Hoy vamos a aprender a cocinar un pan dulce rico, con muchas frutas',
+      '@Yo No van a poder creer lo que son estos mini pan dulce! Receta de pan dulce en formato mini y de esfuerzo mini! Porque éste pan dulce se hace en media hora. Hoy vamos a aprender a cocinar un pan dulce rico...',
     tema: '#pandulce #navidad',
     megusta: 361,
     precio: 6784,
-    clase:'dulce'
+    clase: 'dulce'
   },
 
   {
@@ -72,7 +72,7 @@ const productos = [
     tema: '#focaccia #italia',
     megusta: 500,
     precio: 2744,
-    clase:'salado'
+    clase: 'salado'
   },
 
   {
@@ -86,7 +86,7 @@ const productos = [
     tema: '#carne #carnehorno ',
     megusta: 421,
     precio: 2734,
-    clase:'salado'
+    clase: 'salado'
   },
 
   {
@@ -100,7 +100,7 @@ const productos = [
     tema: '#baklava #postreturco',
     megusta: 548,
     precio: 1734,
-    clase:'dulce'
+    clase: 'dulce'
   },
 
   {
@@ -114,7 +114,7 @@ const productos = [
     tema: '#torta #kinder ',
     megusta: 256,
     precio: 8765,
-    clase:'dulce'
+    clase: 'dulce'
   },
   {
     id: 9,
@@ -123,11 +123,11 @@ const productos = [
     ubicacion: '../img/content/bebFernetCoca.jpg ',
     alt: 'Imágen que presenta trago de Fernet con Coca cola. ',
     descripcion:
-      '@Yo El fernet con coca, también conocido como fernando o su diminutivo fernandito, ​​ es un cóctel que consiste en bebida de cola y fernet sobre hielo, típico de Argentina, donde es considerado un ícono cultural.​ También se expandió y se lo puede encontrar en algunos países limítrofes, como Paraguay o Uruguay.​​',
+      '@Yo El fernet con coca, también conocido como fernando o su diminutivo fernandito, ​​ es un cóctel que consiste en bebida de cola y fernet sobre hielo, típico de Argentina, donde es considerado un ícono cultural. También se expandió y se lo puede encontrar en​',
     tema: '#fernet #cocacola #fernandito',
     megusta: 456,
     precio: 4765,
-    clase:'bebidas'
+    clase: 'bebidas'
   },
   {
     id: 10,
@@ -140,7 +140,7 @@ const productos = [
     tema: '#Bebida #CubaLibre ',
     megusta: 300,
     precio: 3765,
-    clase:'bebidas'
+    clase: 'bebidas'
   }
 ];
 
@@ -148,7 +148,7 @@ const ProductDetail = () => {
   return (
     <>
       {productos.map((item, i) => (
-        <article key={i} className="col-sm-12 col-md-6 col-lg-3">
+        <article key={i} className="col-sm-12 col-md-6 col-lg-3 mt-3">
           <div className="card gradiente">
             <h3>{item.titulo}</h3>
             <a href="404.html">
@@ -160,17 +160,20 @@ const ProductDetail = () => {
             </a>
             <div className="card-body">
               <p className="card-text align-middle">
-                {' '}
                 {item.descripcion}
                 <a href="404.html" className="textAmpliar">
-                  Ver más...{' '}
+                  Ver+
                 </a>
               </p>
-              <p className="textLike">{item.tema}</p>
-              <IconHeart color="red" size={32} />
-              <IconMessage size={32} />
-              <IconShare size={32} />
-              <p> Precio $ {item.precio} </p>
+              <a href="404.html" className="textAmpliar ml-3">
+              {item.tema}
+               </a>
+              <div className="mt-4">
+              <IconHeart className="me-2" color="red" size={32} />
+              <IconMessage className="me-2" size={32} />
+              <IconShare className="me-2" color="green" size={32} />
+              </div>
+              <p className="precio">  Precio $ {item.precio} </p>
             </div>
           </div>
         </article>

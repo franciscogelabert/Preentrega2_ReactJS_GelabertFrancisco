@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from './Logo';
 import CartWidget from './CartWidget.jsx';
-import ItemListContainer from './ItemListContainer.jsx';
+import Menu from './Menu.jsx';
 import Valor from './ValorFijo.jsx';
 import "../../style.css";
 
@@ -11,7 +11,7 @@ const Navbar = () => {
       <nav className="navbar sticky-top navbar-expand-lg flex-row">
         <div className="container-fluid justify-content-between">
           <Logo />
-          <ItemListContainer
+          <Menu
             menu1="Home"
             menu2="Salado"
             menu3="Dulce"

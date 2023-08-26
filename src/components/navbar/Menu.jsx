@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ItemListContainer = (props) => {
+const Menu = (props) => {
   
   return (
     <div className="d-flex align-items-center mb-3 ">
@@ -46,4 +46,4 @@ const ItemListContainer = (props) => {
     </div>
   );
 };
-export default ItemListContainer;
+export default Menu;
