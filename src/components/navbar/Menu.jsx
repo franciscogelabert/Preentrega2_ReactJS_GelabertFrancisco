@@ -1,48 +1,24 @@
 import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
 const Menu = (props) => {
-  
+
   return (
     <div className="d-flex align-items-center mb-3 ">
-    
-    <li className="nav-item mx-3">
-      <a
-        className="nav-link active text-white fs-6 justify-content-end align-text-bottom"
-        aria-current="page"
-        href="#"
-      >
-        {props.menu1}
-      </a>
-    </li>
-    <li className="nav-item mx-3">
-      <a
-        className="nav-link active text-white fs-6"
-        aria-current="page"
-        href="#"
-      >
-       {props.menu2}
-      </a>
-    </li>
-    
-    <li className="nav-item mx-3">
-      <a
-        className="nav-link active text-white fs-6"
-        aria-current="page"
-        href="#"
-      >
-        {props.menu3}
-      </a>
-    </li>
-    <li className="nav-item mx-3">
-      <a
-        className="nav-link active text-white fs-6"
-        aria-current="page"
-        href="#"
-      >
-        {props.menu4}
-      </a>
-    </li>
-  
+
+      <li className="nav-item mx-3">
+        <NavLink to="/">{props.menu1}</NavLink>
+      </li>
+      <li className="nav-item mx-3">
+        <NavLink to="/category/salado">{props.menu2}</NavLink>
+      </li>
+
+      <li className="nav-item mx-3">
+        <NavLink to="/category/dulce">{props.menu3}</NavLink>
+      </li>
+      <li className="nav-item mx-3">
+        <NavLink to="/category/bebidas">{props.menu4}</NavLink>
+      </li>
     </div>
   );
 };
