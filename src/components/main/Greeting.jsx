@@ -16,8 +16,6 @@ const Greeting = (props) => {
         </h2>
       </div>
    </>
-
-
   );
 };
 export default Greeting;

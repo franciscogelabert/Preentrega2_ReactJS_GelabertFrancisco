@@ -29,6 +29,19 @@ h2 {
   animation-timing-function: linear;
 }
 
+.error {
+  background-color: #e26d6d;
+  line-height: 2.2em;
+  text-align: center;
+  font-size: 2em;
+  font-weight: normal;
+  animation-name: gradienDiv;
+  animation-duration: 5s;
+  animation-iteration-count: 2;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+}
+
 h3 {
   background-color: #dfdbdb;
   line-height: 2em;

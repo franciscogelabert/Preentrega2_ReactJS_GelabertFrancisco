@@ -7,17 +7,35 @@ const Menu = (props) => {
     <div className="d-flex align-items-center mb-3 ">
 
       <li className="nav-item mx-3">
-        <NavLink to="/">{props.menu1}</NavLink>
+        <NavLink to="/" style={({ isActive }) => ({
+          color: isActive ? '#1d1d1f' : '#FFFFFF',
+          background: isActive ? '#FFFFFF' : '#1d1d1f',
+          textDecoration: 'none',
+        })}>
+          {props.menu1}
+        </NavLink>
       </li>
       <li className="nav-item mx-3">
-        <NavLink to="/category/salado">{props.menu2}</NavLink>
+        <NavLink to="/category/salado" style={({ isActive }) => ({
+          color: isActive ? '#1d1d1f' : '#FFFFFF',
+          background: isActive ? '#FFFFFF' : '#1d1d1f',
+          textDecoration: 'none',
+        })}>{props.menu2}</NavLink>
       </li>
 
       <li className="nav-item mx-3">
-        <NavLink to="/category/dulce">{props.menu3}</NavLink>
+        <NavLink to="/category/dulce" style={({ isActive }) => ({
+          color: isActive ? '#1d1d1f' : '#FFFFFF',
+          background: isActive ? '#FFFFFF' : '#1d1d1f',
+          textDecoration: 'none',
+        })}>{props.menu3}</NavLink>
       </li>
       <li className="nav-item mx-3">
-        <NavLink to="/category/bebidas">{props.menu4}</NavLink>
+        <NavLink to="/category/bebidas" style={({ isActive }) => ({
+          color: isActive ? '#1d1d1f' : '#FFFFFF',
+          background: isActive ? '#FFFFFF' : '#1d1d1f',
+          textDecoration: 'none',
+        })}>{props.menu4}</NavLink>
       </li>
     </div>
   );

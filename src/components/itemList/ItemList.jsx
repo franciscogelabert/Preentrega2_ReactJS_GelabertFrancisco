@@ -21,9 +21,13 @@ const ItemList = ({ productos }) => {
             <div className="card-body">
               <p className="card-text align-middle">
                 {item.descripcion}
-                <NavLink to="404.html"> Ver+</NavLink>
+                <NavLink to="404.html" style={({ }) => ({
+                  textDecoration: 'none',
+                })}> Ver+</NavLink>
               </p>
-              <NavLink to="404.html">  {item.tema}</NavLink>
+              <NavLink to="404.html" style={({ }) => ({
+                textDecoration: 'none',
+              })}>  {item.tema}</NavLink>
               <div className="mt-4">
                 <IconHeart className="me-2" color="red" size={32} />
                 <IconMessage className="me-2" size={32} />

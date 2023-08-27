@@ -7,13 +7,15 @@ const Error = () => {
 			<main>
 				<div className="container-fluid py-2">
 					<div className="card gradiente wow bounceIn">
-						<h1>404 Opss... </h1>
+						<div className="error">
+							<IconBug color="black" size={60}></IconBug>
+							404 Opss...
+							<IconBug color="black" size={60}></IconBug>
+						</div>
 					</div>
 					<div className="card gradiente wow bounceInRight">
 						<h2>
-							<IconBug color="black" size={60}></IconBug>
 							Lo sentimos esta receta no salió bien.
-							<IconBug color="black" size={60}></IconBug>
 						</h2>
 					</div>
 				</div>
