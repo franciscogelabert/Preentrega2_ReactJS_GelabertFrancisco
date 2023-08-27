@@ -144,10 +144,12 @@ const alimentos = [
 export const getAlimento = (id) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            const product = alimentos.find((p) => p.id === id);
+            const product = alimentos.find((p) => p.id === parseInt(id));
             if (product) {
                 resolve(product);
+
             } else {
+
                 reject("No existe receta con esa identidicación");
             }
         }, 1000);
@@ -161,7 +163,7 @@ export const getAlimentos = (clase) => {
                 ? alimentos.filter((product) => product.clase === clase)
                 : alimentos;
 
-           resolve(productsFiltered);
+            resolve(productsFiltered);
         }, 1000);
     });
 };

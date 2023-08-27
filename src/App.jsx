@@ -23,7 +23,7 @@ export default function App() {
               <Route path="/404.html" element={<Error />} />
               <Route path="/category/:clase/404.html" element={<Error />} />
               <Route path="/category/404.html" element={<Error />} />
-              <Route path="/item/:id//404.html" element={<Error />} />
+              <Route path="/item/:id/404.html" element={<Error />} />
               </Routes>
           </div>
         </div>
