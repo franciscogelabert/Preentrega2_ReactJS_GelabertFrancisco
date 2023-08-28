@@ -3,7 +3,10 @@ import propTypes from "prop-types"
 import '../../style.css';
 import { Link } from 'react-router-dom'
 
-const ItemList = ({ productos }) => {
+const ItemList = ({ productos, isLoading  }) => {
+  if (isLoading) {
+    return <h2 className="bg-info" >Preparando...</h2>;
+  }
   return (
     <>
       {productos.map((item, i) => (
@@ -16,7 +19,6 @@ const ItemList = ({ productos }) => {
               alt={item.alt}
             /></Link>
             <div className="card-body">
-        
               <p className="precio">  Precio $ {item.precio} </p>
             </div>
           </div>
@@ -27,7 +29,8 @@ const ItemList = ({ productos }) => {
 }
 
 ItemList.propTypes = {
-  productos: propTypes.array.isRequired
+  productos: propTypes.array.isRequired,
+  isLoading: propTypes.bool,
 
 };
 

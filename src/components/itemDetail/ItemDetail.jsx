@@ -5,9 +5,22 @@ import { IconHeart } from '@tabler/icons-react'
 import { IconMessage } from '@tabler/icons-react'
 import { IconShare } from '@tabler/icons-react'
 import { Link } from 'react-router-dom'
+import Swal from 'sweetalert2';
+
+
 
 
 const ItemDetail = ({ producto }) => {
+
+  function handleClick() {
+    Swal.fire({
+      icon: 'info',
+      title: 'Página en construcción...',
+      text: 'En breve podrás comprar...',
+    });
+  }
+
+
   return (
     <>
       <div className="card mb-3" >
@@ -33,7 +46,7 @@ const ItemDetail = ({ producto }) => {
                 <IconShare className="me-2" color="green" size={32} />
               </div>
               <p className="precio">  Precio $ {producto.precio} </p>
-              <button className="btn btn-primary me-2 mt-200">
+              <button onClick={handleClick} className="btn btn-primary me-2 mt-200" >
                 Comprar
               </button>
             </div>
