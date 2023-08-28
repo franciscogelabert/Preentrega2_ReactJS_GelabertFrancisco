@@ -2,8 +2,8 @@ import React from "react";
 import Navbar from './components/navbar/NavBar.jsx';
 import Greeting from './components/main/Greeting.jsx';
 import { Routes, Route } from "react-router-dom";
-import ItemListContainer from "./components/itemList/itemListContainer";
-import ItemDetailContainer from "./components/itemDetail/itemDetailContainer";
+import ItemListContainer from "./components/itemList/ItemListContainer";
+import ItemDetailContainer from "./components/itemDetail/ItemDetailContainer";
 import Error from "./components/error/Error";
 
 
