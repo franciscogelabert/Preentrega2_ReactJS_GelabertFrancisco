@@ -17,9 +17,6 @@ const Error = () => {
 						<h2>
 							Lo sentimos esta receta no salió bien.
 						</h2>
-						<div className="container-img contenedor">
-							<img src="../img/content/404.jpg" alt="Logo de Foodier se presenta una tabla para picar comida y un cuchillo de cocina." />
-						</div>
 					</div>
 				</div>
 				<div>
